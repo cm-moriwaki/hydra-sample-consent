@@ -3,7 +3,7 @@ from flask.ext.login import LoginManager, login_required, login_user, logout_use
 import requests
 from hydra.consent import Consent
 
-app = Flask(__name__, template_folder="template")
+app = Flask(__name__)
 app.secret_key = 'idp secret key'
 app.config['SESSION_TYPE'] = 'filesystem'
 login_manager = LoginManager()
