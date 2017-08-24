@@ -17,6 +17,7 @@ setup(
             'run-hydra-sample-consent=hydra_sample_consent.consent:cli',
         ]
     },
+    include_package_data=True,
     tests_require=['nose'],
     test_suite='nose.collector'
 )
