@@ -1,0 +1,19 @@
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8">
+    <title>同意画面</title>
+  </head>
+  <body>
+    <h1>同意アプリ</h1>
+    <form action="/consent" method="post">
+        <p>{{ client_id }}から以下権限の要求がありました。同意しますか？</p>
+        {% for s in scopes %}
+        <ul>
+            <li>{{s}}</li>
+        </ul>
+        {% endfor %}
+        <p><button type="submit" name="action" value="agree">同意する</button></p>
+        <p><button type="submit" name="action" value="disagree">同意しない</button></p>
+    </form>
+  </body>
+</html>
